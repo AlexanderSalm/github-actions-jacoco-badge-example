@@ -33,6 +33,12 @@ test {
     finalizedBy jacocoTestReport
 }
 
+jacocoTestReport {
+    reports {
+        csv.enabled true
+    }
+}
+
 shadowJar {
     mergeServiceFiles()
     exclude 'META-INF/*.DSA', 'META-INF/*.RSA', 'META-INF/*.SF'
